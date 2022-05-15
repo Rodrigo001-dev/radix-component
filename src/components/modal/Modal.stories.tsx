@@ -3,6 +3,7 @@ import { useArgs } from '@storybook/client-api';
 
 import React from 'react';
 
+import { Button } from '../button/Button';
 import { Modal as ModalComponent,
   ModalContent,
   ModalProps,
@@ -43,7 +44,7 @@ const Template: Story<ModalProps> = (args) => {
   return (
     <ModalComponent {...args} onOpenChange={(open) => updateArgs({ open })}>
       <ModalTrigger asChild>
-        <button>Open Modal</button>
+        <Button>Open Modal</Button>
       </ModalTrigger>
 
       <ModalWrapper>

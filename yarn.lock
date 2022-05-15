@@ -15,6 +15,13 @@
   resolved "https://registry.yarnpkg.com/@andromeda-ui/colors/-/colors-0.1.22.tgz#bd1df084f6f64c3c0c9ed56bf52d20ce0e2f7988"
   integrity sha512-zuciQqkJUJIS5dNzJb4O/Sz+oOYOIp6rzJNBgWLJCYYEkYoht5VY2JRDNLUrKdQn9S7+TaLsI8mjFPk/A6WOXA==
 
+"@andromeda-ui/styles@^0.1.22":
+  version "0.1.22"
+  resolved "https://registry.yarnpkg.com/@andromeda-ui/styles/-/styles-0.1.22.tgz#f3e2bd2e33ff4d76c02ee2f35b1987199f889770"
+  integrity sha512-eUCbFxtAAyEbeIU2L4at5DQFU74BjZIKSXxlrk05UnpqSkv7WZ1o6SjRt5hqJ47EejkxWEElKrvO4Bho3ialzQ==
+  dependencies:
+    "@andromeda-ui/web" "^0.1.22"
+
 "@andromeda-ui/web@^0.1.22":
   version "0.1.22"
   resolved "https://registry.yarnpkg.com/@andromeda-ui/web/-/web-0.1.22.tgz#dd2a76255293019ccf74ac67642c1d8c53a1906f"

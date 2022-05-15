@@ -1,10 +1,16 @@
 import React from 'react';
 import * as DialogPrimitive from '@radix-ui/react-dialog';
+
+import { 
+  ModalContent as ModalContentCSS,
+  ModalOverlay as ModalOverlayCSS,
+  ModalWrapper as ModalWrapperCSS 
+} from '../../../styles/src/components/Modal';
 import { styled } from '@andromeda-ui/web';
 
-const StyledModalWrapper = styled(DialogPrimitive.Content, '');
-const StyledModalOverlay = styled(DialogPrimitive.Overlay, '');
-const StyledModalContent = styled('div', '');
+const StyledModalWrapper = styled(DialogPrimitive.Content, ModalWrapperCSS);
+const StyledModalOverlay = styled(DialogPrimitive.Overlay, ModalOverlayCSS);
+const StyledModalContent = styled('div', ModalContentCSS);
 
 /*
   o ModalProps vai receber todas as propriedades que um DialogPrimitive.Root
@@ -46,9 +52,25 @@ React.ComponentProps<typeof StyledModalWrapper> &
   maintainDimentions?: boolean;
 };
 
-export const ModalWrapper = ({ children, ...props }: ModalWrapperProps) => {
+export const ModalWrapper = ({ 
+  children, 
+  width = 700, 
+  maintainDimentions = false, 
+  ...props }
+  : ModalWrapperProps) => {
   return (
-    <StyledModalWrapper {...props}>{children}</StyledModalWrapper>
+    <StyledModalWrapper 
+      {...props} 
+      css={{ $$maxWidth: `${width}px`, ...(!maintainDimentions && {
+        [`@media (max-width ${width}px)`]: {
+          width: '100vw',
+          height: '100vh',
+          borderRadius: 0,
+        }
+      }) }}
+    >
+      {children}
+    </StyledModalWrapper>
   );
 };
 
