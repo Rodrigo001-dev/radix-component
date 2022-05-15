@@ -7,10 +7,10 @@ import { Button as ButtonCSS } from '@andromeda-ui/styles';
 const StyledButton = styled('button', ButtonCSS);
 
 export type ButtonProps = React.ComponentProps<typeof DialogPrimitive.Root> & {
-  size?: number;
+  size?: string;
   variant?: boolean;
   loading?: boolean;
-};
+}
 
 export const Button = ({children, ...props }: ButtonProps) => {
   return (

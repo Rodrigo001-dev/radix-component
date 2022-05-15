@@ -4,6 +4,7 @@ import { useArgs } from '@storybook/client-api';
 import React from 'react';
 
 import { Button } from '../button/Button';
+import { Text } from '../text/Text';
 import { Modal as ModalComponent,
   ModalContent,
   ModalProps,
@@ -49,7 +50,7 @@ const Template: Story<ModalProps> = (args) => {
 
       <ModalWrapper>
         <ModalContent>
-          <span>Hello World</span>
+          <Text>Hello World</Text>
         </ModalContent>
       </ModalWrapper>
     </ModalComponent>
