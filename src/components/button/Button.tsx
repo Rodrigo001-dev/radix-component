@@ -5,7 +5,7 @@ import {
 } from '@andromeda-ui/styles';
 import { styled } from '@andromeda-ui/web';
 
-import React, { forwardRef, ReactElement } from 'react';
+import React, { forwardRef } from 'react';
 
 const StyledButton = styled('button', ButtonCSS);
 const ButtonLabel = styled('span', ButtonLabelCSS);
