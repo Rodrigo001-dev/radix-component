@@ -1,4 +1,4 @@
-## Projeto
+## :page_with_curl: Projeto
 
 Nessa aplicação Criei um componente utilizando o Radix UI
 
